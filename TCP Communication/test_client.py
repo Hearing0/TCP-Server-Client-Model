@@ -1,5 +1,8 @@
 import socket
 
+""" Client-side TCP communication on Python.
+"""
+
 IP = "127.0.0.1"
 PORT = 4455
 ADDR = (IP, PORT)
@@ -7,7 +10,8 @@ SIZE = 1024
 FORMAT = "utf-8"
 
 def main():
-    """_summary_
+    """ Establishes TCP socket with server, receives a message, appends its own
+        message, sends it, then closes its socket.
     """
     # Create Client-side Socket Connection
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -23,7 +27,7 @@ def main():
     client.send(data.encode(FORMAT))
     
     client.close()
-    print(f"[SERVER] Connection closed.")
+    print("[SERVER] Connection closed.")
 
 
     

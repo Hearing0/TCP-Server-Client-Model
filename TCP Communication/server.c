@@ -10,6 +10,12 @@
 #define PORT 4455
 
 int main() {
+    /**
+     * Establishes Server Socket, preps for communication, then iteratively
+     * accepts client connections. When accepting connections, it sends a 
+     * message to client, receives a message from client, prints message, 
+     * then severs connection.
+     */
 
     // TCP Variables and Structures
     int server_fd, client_fd;
